@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::apiResource('product', 'ProductController');
+Route::get('country','Country\CountryController@country');
+Route::get('country','Country\CountryController@countryByID');
+Route::post('country','Country\CountryController@countryCreate');
